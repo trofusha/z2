@@ -1,7 +1,6 @@
 #!/bin/bash
 
-export UID=${UID:-$(id -u)}
-export GID=${GID:-$(id -g)}
+cp .env.example .env
 
 docker compose down
 docker compose up -d --build --pull always
